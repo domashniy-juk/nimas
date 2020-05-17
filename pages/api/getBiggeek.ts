@@ -1,4 +1,11 @@
-const data = require('./data/biggeek.json')
+let data = [];
+try {
+    data = require('./data/biggeek.json');
+} catch(e) {
+
+}
+
 export default (req, res) => {
-    res.json(data);
-  };
+    console.log(data)
+    res.status(200).json(data);
+};
